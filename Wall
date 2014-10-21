@@ -39,4 +39,5 @@ public class Wall {
     public void setWallLocation(Point wallLocation) {
         this.wallLocation = wallLocation;
     }
+    
 }
