@@ -1,0 +1,42 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package engine;
+
+import java.awt.Point;
+
+/**
+ *
+ * @author i13037
+ */
+public class Fire{
+
+    private Point fireLocation;
+    
+    /**
+     * Constructor kelas Fire
+     * @param p posisi api
+     */
+    public Fire(Point p){
+        this.fireLocation.setLocation(p);
+    }
+
+    /**
+     * Method untuk mengembalikkan lokasi api
+     * @return lokasi api
+     */
+    public Point getFireLocation() {
+        return fireLocation;
+    }
+
+    /**
+     * Method untuk mengubah lokasi api
+     * @param fireLocation lokasi api baru
+     */
+    public void setFireLocation(Point fireLocation) {
+        this.fireLocation = fireLocation;
+    }
+}
