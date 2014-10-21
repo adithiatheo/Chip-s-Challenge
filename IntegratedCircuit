@@ -39,4 +39,5 @@ public class IntegratedCircuit {
     public void setICLocation(Point ICLocation) {
         this.ICLocation = ICLocation;
     }
+    
 }
