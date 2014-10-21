@@ -1,0 +1,42 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package engine;
+
+import java.awt.Point;
+
+/**
+ *
+ * @author i13037
+ */
+public class Wall {
+    
+    private Point wallLocation;
+
+    /**
+     * Constructor kelas Wall
+     * @param wallLocation lokasi wall
+     */
+    public Wall(Point wallLocation) {
+        this.wallLocation = wallLocation;
+    }
+
+    /**
+     * Method untuk mengembalikan lokasi wall / dinding
+     * @return lokasi wall / dinding
+     */
+    public Point getWallLocation() {
+        return wallLocation;
+    }
+
+    /**
+     * Method untuk mengubah lokasi wall / dinding
+     * @param wallLocation lokasi baru
+     */
+    public void setWallLocation(Point wallLocation) {
+        this.wallLocation = wallLocation;
+    }
+}
