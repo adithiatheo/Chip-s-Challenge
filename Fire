@@ -39,4 +39,5 @@ public class Fire{
     public void setFireLocation(Point fireLocation) {
         this.fireLocation = fireLocation;
     }
+    
 }
