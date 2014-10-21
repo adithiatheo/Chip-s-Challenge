@@ -105,5 +105,4 @@ public class Chip {
             this.location.setLocation(newLocation);
         }
     }
-        
 }
