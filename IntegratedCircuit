@@ -1,0 +1,42 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package engine;
+
+import java.awt.Point;
+
+/**
+ *
+ * @author i13037
+ */
+public class IntegratedCircuit {
+
+    private Point ICLocation;
+
+    /**
+     * Constructor kelas IntegrateCircuit
+     * @param ICLocation lokasi IC
+     */
+    public IntegratedCircuit(Point ICLocation) {
+        this.ICLocation = ICLocation;
+    }
+
+    /**
+     * Method untuk mengembalikan lokasi IC
+     * @return lokasi IC berupa point
+     */
+    public Point getICLocation() {
+        return ICLocation;
+    }
+
+    /**
+     * Method untuk memindahkan lokasi IC
+     * @param ICLocation lokasi baru IC
+     */
+    public void setICLocation(Point ICLocation) {
+        this.ICLocation = ICLocation;
+    }
+}
