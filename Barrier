@@ -42,4 +42,5 @@ public class Barrier {
     public void setBarrierLocation(Point barrierLocation) {
         this.barrierLocation = barrierLocation;
     }
+    
 }
