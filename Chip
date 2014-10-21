@@ -1,0 +1,109 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package engine;
+
+import java.awt.Point;
+
+/**
+ *
+ * @author i13037
+ */
+public class Chip {
+    
+    private Point location;
+    private String status;
+    private int icTaken;
+    
+    /**
+     * Constructor Kelas Chip
+     * Menginisiasikan status Chip menjadi "ALIVE" dan jumlah IC yg diambil  dengan 0
+     * @param input posisi awal Chip
+     */
+    public Chip(Point input){
+        this.location=input;
+        this.status="ALIVE";
+        this.icTaken=0;
+    }
+    
+    /**
+     * Method untuk mengecek apakah Chip masih hidup
+     * @return true jika Chip masih hidup, false jika Chip sudah mati
+     */
+    public boolean isAlive(){
+        switch(this.status){
+            case "ALIVE": return true;
+        }
+        return false;
+    }
+    
+    /**
+     * Method untuk mengecek apakah Chip sudah sampai di finish point
+     * @param finishPoint point tempat finish point terletak
+     * @return true jika posisi chip sama dengan posisi finish point, false jika tidak
+     */
+    public boolean isFinished(Point finishPoint){
+        if (location.equals(finishPoint)) return true;
+        else return false;
+    }
+
+    /**
+     * Method untuk mengubah status Chip
+     * @param status status chip yg baru
+     */
+    public void setStatus(String status) {
+        this.status = status;
+    }
+    
+    /**
+     * Method untuk mengambil IC
+     * Jika lokasi Chip tidak sama dengan lokasi IC maka tidak akan terjadi apa-apa
+     * @param ic lokasi / posisi IC
+     */
+    public void take(Point ic){
+        if (location.equals(ic)){
+            this.icTaken+=1;
+        }
+    }
+    
+    /**
+     * method untuk mengecek apakah Chip bisa berpindah tempat
+     * @param x lokasi wall / dinding penghalang
+     * @return true jika Chip bisa berpindah tempat, false jika tidak
+     */
+    public boolean canMove(Point x){
+        if(this.location.equals(x)){
+            return false;
+        } else {
+            return true;
+        }
+    }
+    
+    /**
+     * Method untuk menggerakkan Chip
+     * @param x 2 berarti kebawah, 4 berarti kekiri, 8 berarti keatas, 6 berarti kekanan
+     */
+    public void move(int x){
+        Point newLocation;
+        if(x==2){
+            newLocation=new Point((this.location.x+1), this.location.y);
+            this.location.setLocation(newLocation);
+        }
+        if(x==4){
+            newLocation=new Point(this.location.x, (this.location.y-1));
+            this.location.setLocation(newLocation);
+        }
+        if(x==6){
+            newLocation=new Point(this.location.x, (this.location.y+1));
+            this.location.setLocation(newLocation);
+        }
+        if(x==8){
+            newLocation=new Point((this.location.x-1), this.location.y);
+            this.location.setLocation(newLocation);
+        }
+    }
+        
+}
